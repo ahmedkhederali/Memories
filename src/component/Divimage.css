@@ -1,0 +1,433 @@
+
+#tooldiv{
+  margin-bottom: 100px;
+  }
+  .main{
+      width: 90%;
+      margin: auto;
+  }
+  
+  .lang_select{
+    padding: 0px!important;
+    width: 100px !important;
+    height: 20px !important;
+    margin: 10px;
+    color:#fff !important;
+    border:0px !important;
+  }
+  .css-1wy0on6{
+    display: none !important;
+  }
+  .lang_select .css-1dimb5e-singleValue{
+    color:#fff !important;
+  }
+
+  .lang_select .css-qbdosj-Input input{
+    width:0px !important;
+    border:0px !important;
+    outline: 0px !important;
+  }
+  .lang_select .css-13cymwt-control{
+    background-color:#222 !important; 
+    border:1px solid #f29122f1 !important;
+  }
+  .lang_select  .css-t3ipsp-control:hover {
+    border-color:#f29122  !important;
+  }
+  .lang_select  .css-1hb7zxy-IndicatorsContainer{
+    display: none!important;
+  }
+  .lang_select img{
+    width: 50% !important;
+  }
+   .form-select:focus {
+    border-color: #f29122f1 !important ;
+    outline: 0 !important;
+    box-shadow: 0 0 0 0.25rem rgba(195, 138, 7, 0.25) !important;
+  }
+
+  .Modal{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  }
+  .Modal img{
+    width: 100%;
+    height: 250px;
+  }
+  
+  
+  #mosaic-container {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 0 !important;
+      gap: 0;
+      width:100%!important;
+      height: 700px ;
+      align-items:start ;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      
+  
+      
+    }
+    
+    .tile {
+      width: 2px;
+      height: 2px;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background-size:cover;
+      background-repeat:no-repeat;
+      background-position:center;
+      box-sizing:border-box;
+      opacity: 1 !important;
+      
+    }
+    
+  
+    .tile:hover {
+      border:0.05px solid rgb(2, 191, 248) !important;
+    }
+  
+    
+    .commentlist {
+      width: 100%;
+      height: 200px !important;
+      font-size: 14px;
+      padding: 5px;
+      overflow-x: auto !important;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* Internet Explorer and Edge */
+    }
+    .commentlist p{
+      margin:2px !important;
+    }
+    
+    .close{
+      width:100%;
+      display: flex;
+      justify-content: space-between;
+   
+    }
+    .image_list{
+      width: 100%;
+      height: 100%;
+      
+    }
+    .publisher{
+      font-size: 13px;
+      color: gray;
+    }
+    .date{
+      font-size: 13px;
+      color: gray;
+    }
+    .comment_div{
+      position: absolute;
+      top:0;
+    }
+    .addcommment input{
+      color:black !important;
+      background-color:white!important;
+  
+    }
+    .addbtn-tool{
+     
+      background-color: #222222 !important;
+      color:#f29122f1 !important;
+      border:0px solid transparent !important;
+      font-size: 21px !important;
+      font-weight: 300 !important;
+      letter-spacing: 4px;
+      border:1px solid #f29122f1 !important;
+      border-radius: 5px;
+    }
+  
+  
+    .addcommment input .form-control:focus {
+      color: var(--bs-body-color);
+      background-color: var(--bs-body-bg);
+      border-color: #ab610bf1 !important;
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem rgba(188, 116, 7, 0.25) !important;
+  }
+  .div-item{
+    width: 1px;
+    height: 1px;
+    border:0.1px solid rgba(128, 128, 128, 0.05);
+    
+  }
+  .div-item:hover{
+    border:0.5px solid rgb(12, 182, 233);
+  }
+  .searchdiv{
+    position: relative;
+    width: 100%;
+  
+  }
+  .search_input{
+    width: 200px !important;
+  }
+  
+  .sr-output{
+    position: absolute;
+    width: 19.5%;
+    background-color:white;
+    overflow-y: scroll;
+    height: 400px;
+    top:100%;
+    left: 0;
+    z-index: 100000;
+    padding:0
+  }
+  .sr-output li{
+    list-style: none;
+    height:50px;
+  }
+  .sr-output p{
+    font-size: 12px;
+    height: 100%;
+    overflow: auto;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: transparent transparent;
+  }
+  .sr-output p::-webkit-scrollbar{
+    width: 0;
+    background: transparent;
+  }
+
+
+  .arsr-output{
+    position: absolute;
+    width: 19.5%;
+    background-color:white;
+    overflow-y: scroll;
+    height: 400px;
+    top:100%;
+    right:0;
+    z-index: 100000;
+    padding:0
+  }
+  .arsr-output li{
+    list-style: none;
+    height:50px;
+  }
+  .arsr-output p{
+    font-size: 12px;
+    height: 100%;
+    overflow: auto;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: transparent transparent;
+  }
+  .arsr-output p::-webkit-scrollbar{
+    width: 0;
+    background: transparent;
+  }
+  .text-tool{
+    font-size: 20px;
+    font-weight: 500px;
+    padding: 0;
+    margin: 0;
+  }
+  .social_limk img{
+    width: 28px;
+    height: 28px;
+    
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Invert the color of the calendar icon (white) */
+  }
+  
+  /* Style for the calendar icon (Firefox) */
+  input[type="date"]::-moz-calendar-picker-indicator {
+    filter: invert(1); /* Invert the color of the calendar icon (white) */
+  }
+  
+  /* Style for the calendar icon (Edge legacy) */
+  input[type="date"]::-ms-calendar-picker-indicator {
+    filter: invert(1); /* Invert the color of the calendar icon (white) */
+  }
+  .star{
+    position: absolute;
+    right:5px;
+    top:5px;
+    font-size: 3rex;
+  }
+  .image_model div{
+    position:relative;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+  }
+  .logoooo{
+    align-items:center !important;
+  }
+.crvimg{
+  position: absolute;
+  top: 0;
+  width:100%;
+  z-index: -1;
+}
+
+
+
+  @media only screen and (max-width: 349PX) {
+    .searchdiv .search_ff{
+      width: 130px !important;
+      height: 30px !important;
+    }
+    .searchdiv .search_ff input{
+      width: 130px !important;
+      height: 20px !important;
+    }
+    .searchdiv .DOWNLOAD_BTN{
+      font-size: 12px !important;
+     
+    }
+  }
+   @media only screen and (min-width: 767px) and (max-width: 575px){
+    .lang_select{
+      padding: 0px!important;
+      width: 80px !important;
+      height: 20px !important;
+      margin: 10px;
+      color:#f29122f1 !important;
+    }
+  .searchdiv .search_ff{
+    width: 130px !important;
+    height: 0px !important;
+  }
+  .searchdiv .search_ff input{
+    width: 130px !important;
+    height: 20px !important;
+  }
+  .searchdiv .DOWNLOAD_BTN{
+    font-size: 14px !important;
+  }
+  .logoooo{
+  align-items:end !important;
+  }
+  .logoooo div{
+   align-items:end !important;
+  }
+  .logoooo div:last-child{
+    padding-bottom: 1.1rem;
+    margin-bottom: 1.3rem;
+   }
+   .publisher{
+    font-size: 10px;
+    color: gray;
+  }
+  /* .image_model{
+    height: 30% !important;
+  } */
+  .image_model div:first-child{
+    height: 90% !important;
+  }
+  .image_model .likes{
+    font-size: 10px !important;
+  }
+  .image_model .date{
+    font-size: 10px !important;
+  }
+  
+  .comments_div {
+    font-size: 12px !important;
+   
+  }
+ 
+  .Description{
+    font-size: 12px !important;
+    padding: 0px !important;
+    margin-bottom: 0px;
+  }
+  
+  .commentlist {
+    width: 100%;
+    height: 200px !important;
+    font-size: 10px !important;
+    padding: 2px;
+    overflow-x: auto !important;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+  }
+  .commentlist p{
+    margin: 0px !important;
+  }
+  .text-tool p{
+    font-size: 18px !important;
+    letter-spacing: 3px !important;
+  }
+  .comment_div{
+    position: absolute;
+    top:60%;
+    right: 30%;
+    width: 180px !important;
+  }
+  .comment_div .card{
+    width: 100% !important;
+    height: 160px !important;
+  }
+  .comment_div .card-body{
+    padding: 10px !important;
+  }
+  .addcommment input{
+    color:black !important;
+    background-color:white!important;
+    width: 90% !important;
+    font-size: 13px;
+  }
+  .addbtn-tool{
+    background-color: #222222 !important;
+    color:#f29122f1 !important;
+    border:0px solid transparent !important;
+    font-size: 14px !important;
+    font-weight: 300 !important;
+    letter-spacing: 2px;
+    border:1px solid #f29122f1 !important;
+    border-radius: 5px;
+  }
+  
+}
+@media only screen and (min-width: 575px) and (max-width: 730px){
+  .lang_select{
+    padding: 0px!important;
+    width: 80px !important;
+    height: 20px !important;
+    margin: 10px;
+    color:#f29122f1 !important;
+  }
+  .comment_div{
+    position: absolute;
+    top:0;
+    width: 180px !important;
+  }
+  .comment_div .card{
+    width: 100% !important;
+    height: 160px !important;
+  }
+  .comment_div .card-body{
+    padding: 10px !important;
+  }
+  .addcommment input{
+    color:black !important;
+    background-color:white!important;
+    width: 90% !important;
+    font-size: 14px;
+  }
+  .addbtn-tool{
+   
+    background-color: #222222 !important;
+    color:#f29122f1 !important;
+    border:0px solid transparent !important;
+    font-size: 16px !important;
+    font-weight: 300 !important;
+    letter-spacing: 2px;
+    border:1px solid #f29122f1 !important;
+    border-radius: 5px;
+  }
+}

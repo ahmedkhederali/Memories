@@ -1,0 +1,547 @@
+.next-btn{
+    position: absolute;
+    top:85%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: #222222e8 !important;
+    color:#f29122f1 !important;
+    border:0px solid transparent !important;
+    font-size: 21px !important;
+    font-weight: 300 !important;
+    letter-spacing: 4px;
+    border:1px solid #f29122f1 !important;
+}
+.next-btn:hover{
+    font-weight: 700 !important;
+}
+.ReactModal__Content  {
+    width: 90% !important;
+}
+
+
+.gallary-btn{
+    position: sticky;
+    top:85%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: #222222e8 !important;
+    color:#f29122f1 !important;
+    border:0px solid transparent !important;
+    font-size: 21px !important;
+    font-weight: 300 !important;
+    letter-spacing: 4px;
+    border:1px solid #f29122f1 !important;
+}
+.upload-btn{
+    width:200px;
+    height:60px;
+    background-color: #222222 !important;
+    color:#f29122f1 !important;
+    border:0px solid transparent !important;
+    font-size: 21px !important;
+    font-weight: 300 !important;
+    letter-spacing: 4px;
+    border:1px solid #f29122f1 !important;
+    border-radius: 5px;
+}
+.upload-btn:hover{
+    font-weight: 400 !important;
+    background-color: #333 !important;
+}
+label{
+    color:#f29122f1 !important;  
+}
+label::after{
+    background-color:#222222 !important;
+}
+ input{
+    background-color:#222222 !important;
+    color:#f29122f1 !important;
+    border:1px solid #ab610bf1 !important; 
+}
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #ab610bf1 !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(188, 116, 7, 0.25) !important;
+}
+.pagimg{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    background-origin: content-box;
+    border-radius:5px;
+    overflow: hidden;
+}
+
+.btn-div{
+    width: auto;
+    height: auto;
+}
+.save-btn,.rotate-btn{
+    width: 100%;
+    background-color: #222222 !important;
+    color:#f29122f1 !important;
+    border:0px solid transparent !important;
+    font-size: 14px !important;
+    font-weight: 300 !important;
+    letter-spacing: 4px;
+    border:1px solid #f29122f1 !important;
+    border-radius: 5px;
+    display: block;
+}
+.imagevisa{
+    width: 80px;
+    height: 50px;
+    background-size:cover;
+    background-position:center;
+}
+.imagec_credit div{
+    width: 50px !important;
+    background-color:white!important;
+    height: 40px !important
+}
+.text_price{
+    color:tomato;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+}
+
+.fading-animation {
+    animation: fadeAnimation 2s infinite;
+  }
+  
+  @keyframes fadeAnimation {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  .datefield{
+    height:  calc(3.5rem + calc(var(--bs-border-width) * 2)) !important;
+    min-height: calc(3.5rem + calc(var(--bs-border-width) * 2));
+    width: 267px !important;
+  }
+  .gallary_header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #363534;
+  }
+  
+  .gallary_footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #363534;
+  }
+
+  .form-floating>label {
+    position: absolute;
+    bottom: 10px !important;
+    right:-18% !important;
+    z-index: 2;
+    height: 100%;
+    padding: 1rem .75rem;
+    overflow: hidden;
+    text-align: start;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    pointer-events: none;
+    border: var(--bs-border-width) solid transparent;
+    transform-origin: 0 0;
+    transition: opacity .1s ease-in-out,transform .1s ease-in-out;
+    direction: rtl;
+}
+.form-floating>.dis_label{
+    position: absolute;
+    bottom: 10px !important;
+    right:-15% !important;
+    z-index: 2;
+    height: 100%;
+    padding: 1rem .75rem;
+    overflow: hidden;
+    text-align: start;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    pointer-events: none;
+    border: var(--bs-border-width) solid transparent;
+    transform-origin: 0 0;
+    transition: opacity .1s ease-in-out,transform .1s ease-in-out;
+    direction: rtl;
+}
+.form-floating>.vis_label{
+    position: absolute;
+    bottom: 10px !important;
+    
+    right:0px !important;
+    z-index: 2;
+    height: 100%;
+    padding: 1rem .75rem;
+    overflow: hidden;
+    text-align: start;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    pointer-events: none;
+    border: var(--bs-border-width) solid transparent;
+    transform-origin: 0 0;
+    transition: opacity .1s ease-in-out,transform .1s ease-in-out;
+    direction: rtl;
+}
+.icons_social{
+    border:2px solid black;
+    border-radius:50%;
+    background-color:#ed8b1cd4;
+    color:#222222 !important;
+    padding: 10px;
+    margin-left:5px !important;
+    margin-right:5px !important
+}
+
+
+
+@media only screen and (max-width: 499px) {
+    .icons_social{
+        border:2px solid black;
+        border-radius:50%;
+        background-color:#ed8b1cd4;
+        color:#222222 !important;
+        padding: 5px;
+        margin-left:2px !important;
+        margin-right:2px !important
+    }
+    .up_btn{
+        width: 100px !important;
+        font-size: 14px !important;
+        
+    }
+    .text_price{
+        font-size: 13px !important;
+    }
+    .form-floating{
+        height: 60px !important;
+        margin-bottom: 10px !important;
+    }
+    .form-floating input{
+        height: 10px !important;
+        padding: 5px !important;
+        margin: 0px;
+        width: 140px !important;
+        font-size: 12px !important;
+    }
+    .form-floating>.vis_label{
+        width: 140px !important;
+        padding-right: 0px !important;
+    }
+    .form-floating label{
+        font-size:10px !important;
+        padding-left: 5px !important;
+    }
+    .ReactModal__Content  {
+        width: 90% !important;
+        height: 40vh !important;
+    }
+    .model1_buttons{
+        
+        width: 140px !important;
+            height:40px;
+            background-color: #222222 !important;
+            color:#f29122f1 !important;
+            border:0px solid transparent !important;
+            font-size: 14px !important;
+            font-weight: 300 !important;
+            letter-spacing: 4px;
+            border:1px solid #f29122f1 !important;
+            border-radius: 5px;
+        
+    }
+    .next-btn{
+        
+            position: absolute;
+            top:89%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background-color: #222222e8 !important;
+            color:#f29122f1 !important;
+            border:0px solid transparent !important;
+            font-size: 16px !important;
+            font-weight: 300 !important;
+            letter-spacing: 4px;
+            border:1px solid #f29122f1 !important;
+        
+    }
+    .imagec_credit div{
+        width: 20px !important;
+        background-color:white!important;
+        height: 15px !important
+    }
+    .checklabels{
+        font-size:8px !important;
+    }
+}
+  /* Extra Small Devices, Phones */
+@media only screen and (min-width: 500px) and (max-width: 575px) {
+    .icons_social{
+        border:2px solid black;
+        border-radius:50%;
+        background-color:#ed8b1cd4;
+        color:#222222 !important;
+        padding: 5px;
+    }
+    .up_btn{
+        width: 100px !important;
+        font-size: 14px !important;
+        
+    }
+    .text_price{
+        font-size: 13px !important;
+    }
+    .form-floating{
+        height: 60px !important;
+        margin-bottom: 10px !important;
+    }
+    .form-floating input{
+        height: 10px !important;
+        padding: 5px !important;
+        margin: 0px;
+        width: 180px !important;
+        font-size: 12px !important;
+    }
+    .form-floating>.vis_label{
+        width: 180px !important;
+        padding-right: 0px !important;
+    }
+    .form-floating label{
+        font-size:10px !important;
+        padding-left: 5px !important;
+    }
+    .ReactModal__Content  {
+        width: 90% !important;
+        height: 50vh !important;
+    }
+    .model1_buttons{
+        
+            width:180px;
+            height:40px;
+            background-color: #222222 !important;
+            color:#f29122f1 !important;
+            border:0px solid transparent !important;
+            font-size: 14px !important;
+            font-weight: 300 !important;
+            letter-spacing: 4px;
+            border:1px solid #f29122f1 !important;
+            border-radius: 5px;
+        
+    }
+    .next-btn{
+        
+            position: absolute;
+            top:89%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background-color: #222222e8 !important;
+            color:#f29122f1 !important;
+            border:0px solid transparent !important;
+            font-size: 16px !important;
+            font-weight: 300 !important;
+            letter-spacing: 4px;
+            border:1px solid #f29122f1 !important;
+        
+    }
+    .imagec_credit div{
+        width: 30px !important;
+        background-color:white!important;
+        height: 25px !important
+    }
+  }
+  
+  /* Small Devices, Tablets */
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    .text_price{
+        font-size: 13px !important;
+    }
+    .form-floating{
+        height: 60px !important;
+        margin-bottom: 10px !important;
+    }
+    .form-floating input{
+        height: 20px !important;
+        padding: 5px !important;
+        margin: 0px;
+        width: 230px !important;
+        font-size: 15px !important;
+    }
+    .form-floating>.vis_label{
+        width:230px !important;
+        padding-right: 0px !important;
+    }
+    .form-floating label{
+        font-size:12px !important;
+        padding-left: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    .ReactModal__Content  {
+        width: 92% !important;
+        height: 50vh !important;
+    }
+    .model1_buttons{
+        
+            width:230px;
+            height:40px;
+            background-color: #222222 !important;
+            color:#f29122f1 !important;
+            border:0px solid transparent !important;
+            font-size: 14px !important;
+            font-weight: 300 !important;
+            letter-spacing: 4px;
+            border:1px solid #f29122f1 !important;
+            border-radius: 5px;
+        
+    }
+    .next-btn{
+        
+            position: absolute;
+            top:89%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background-color: #222222e8 !important;
+            color:#f29122f1 !important;
+            border:0px solid transparent !important;
+            font-size: 16px !important;
+            font-weight: 300 !important;
+            letter-spacing: 4px;
+            border:1px solid #f29122f1 !important;
+        
+    }
+    .imagec_credit div{
+        width: 30px !important;
+        background-color:white!important;
+        height: 25px !important
+    }
+  }
+  
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .text_price{
+        font-size: 13px !important;
+    }
+    .form-floating{
+        height: 60px !important;
+        margin-bottom: 10px !important;
+    }
+    .form-floating input{
+        height: 20px !important;
+        padding: 5px !important;
+        margin: 0px;
+        width: 300px !important;
+        font-size: 15px !important;
+    }
+    .form-floating>.vis_label{
+        width:300px !important;
+        padding-right: 0px !important;
+    }
+    .form-floating label{
+        font-size:12px !important;
+        padding-left: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    .ReactModal__Content  {
+        width: 90% !important;
+        height: 40vh !important;
+    }
+    .model1_buttons{
+        
+            width:300px;
+            height:40px;
+            background-color: #222222 !important;
+            color:#f29122f1 !important;
+            border:0px solid transparent !important;
+            font-size: 14px !important;
+            font-weight: 300 !important;
+            letter-spacing: 4px;
+            border:1px solid #f29122f1 !important;
+            border-radius: 5px;
+        
+    }
+    .next-btn{
+        
+            position: absolute;
+            top:89%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background-color: #222222e8 !important;
+            color:#f29122f1 !important;
+            border:0px solid transparent !important;
+            font-size: 16px !important;
+            font-weight: 300 !important;
+            letter-spacing: 4px;
+            border:1px solid #f29122f1 !important;
+        
+    }
+  }
+  
+  /* Large Devices, Wide Screens */
+  @media only screen and (min-width: 992px) {
+    .text_price{
+        font-size: 13px !important;
+    }
+    .form-floating{
+        height: 60px !important;
+        margin-bottom: 10px !important;
+    }
+    .form-floating input{
+        height: 60px !important;
+        margin: 0px;
+        width: 350px !important;
+        font-size: 18px !important;
+    }
+    .form-floating>.vis_label{
+        width: 350px !important;
+        padding-right: 0px !important;
+    }
+    .form-floating label{
+        font-size:15px !important;
+        padding-left: 5px !important;
+        padding-bottom: 10px !important;
+    }
+    .ReactModal__Content  {
+        width: 60% !important;
+        height: 50vh !important;
+        padding: 10px  !important;
+    }
+    .model1_buttons{
+            width:350px;
+            height:40px;
+            background-color: #222222 !important;
+            color:#f29122f1 !important;
+            border:0px solid transparent !important;
+            font-size: 14px !important;
+            font-weight: 300 !important;
+            letter-spacing: 4px;
+            border:1px solid #f29122f1 !important;
+            border-radius: 5px;
+        
+    }
+    .next-btn{
+        
+            position: absolute;
+            top:89%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background-color: #222222e8 !important;
+            color:#f29122f1 !important;
+            border:0px solid transparent !important;
+            font-size: 16px !important;
+            font-weight: 300 !important;
+            letter-spacing: 4px;
+            border:1px solid #f29122f1 !important;
+        
+    }
+  }
+  
