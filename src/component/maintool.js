@@ -70,8 +70,8 @@ function Loading({ data, len, setImageID, ImageID,bg ,reff}) {
     
     >
       <TransformWrapper ref={zoomPanRef}
-   
- 
+      options={{ pan: false, pinch: false }}
+      alignmentAnimation={{ sizeX: 0, sizeY: 0 }}
     >
     <TransformComponent>
       <div id="mosaic-container"  ref={reff} className="p-0 m-0" disableMapInteraction style={{backgroundImage:`url(${bg})`,}}>
