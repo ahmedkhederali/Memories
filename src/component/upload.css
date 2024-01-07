@@ -232,7 +232,7 @@ label::after{
         height: 10px !important;
         padding: 5px !important;
         margin: 0px;
-        width: 140px !important;
+        width: 100% !important;
         font-size: 12px !important;
     }
     .form-floating>.vis_label{
@@ -275,6 +275,18 @@ label::after{
             letter-spacing: 4px;
             border:1px solid #f29122f1 !important;
         
+    }
+    .next-btn-special{
+            position: relative;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background-color: #222222e8 !important;
+            color:#f29122f1 !important;
+            border:0px solid transparent !important;
+            font-size: 16px !important;
+            font-weight: 300 !important;
+            letter-spacing: 4px;
+            border:1px solid #f29122f1 !important;
     }
     .imagec_credit div{
         width: 20px !important;

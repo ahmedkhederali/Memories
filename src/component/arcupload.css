@@ -135,8 +135,8 @@ label::after{
   }
   
   .gallary_footer {
-    position: sticky;
-    bottom: -12px;
+    position: absolute;
+    bottom: 0;
     width: 100%;
     z-index: 100;
     background-color: #363534;
@@ -232,7 +232,7 @@ label::after{
         height: 10px !important;
         padding: 5px !important;
         margin: 0px;
-        width: 140px !important;
+        width: 100% !important;
         font-size: 12px !important;
     }
     .form-floating>.vis_label{
@@ -245,11 +245,11 @@ label::after{
     }
     .ReactModal__Content  {
         width: 90% !important;
-        height: 40vh !important;
+        height: 60vh !important;
     }
     .model1_buttons{
         
-        width: 140px !important;
+        width: 100% !important;
             height:40px;
             background-color: #222222 !important;
             color:#f29122f1 !important;
@@ -259,6 +259,7 @@ label::after{
             letter-spacing: 4px;
             border:1px solid #f29122f1 !important;
             border-radius: 5px;
+            margin-bottom: 10px;
         
     }
     .next-btn{

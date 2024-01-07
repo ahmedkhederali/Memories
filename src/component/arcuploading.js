@@ -713,6 +713,8 @@ function ARCUploading({ data, setImageID, addedImagee, setAddedImages, price, of
               ;
               // Store the ID in local storage
               localStorage.setItem("newElementID", data.id);
+              
+
             }
             return Promise.resolve();
           })
@@ -724,7 +726,7 @@ function ARCUploading({ data, setImageID, addedImagee, setAddedImages, price, of
 
       await Promise.all(uploadPromises);
 
-
+debugger
       setopen(false);
       Swal.fire({
         title: "يتم الرفع",
@@ -732,16 +734,17 @@ function ARCUploading({ data, setImageID, addedImagee, setAddedImages, price, of
         icon: "success",
         confirmButtonText: "تاكيد",
         preConfirm: () => {
+          debugger
           return new Promise((resolve) => {
             // Fetch the stored ID from local storage
             const storedID = localStorage.getItem("newElementID");
             // Use this ID to highlight the element or perform specific actions
-
             window.location.reload();
             resolve(); // Resolve the promise after reloading
           });
         },
       });
+      window.location.reload();
     } catch (error) {
       console.error("Error occurred during image upload:", error);
       // Handle errors if needed
@@ -835,7 +838,7 @@ function ARCUploading({ data, setImageID, addedImagee, setAddedImages, price, of
             </p>
             <div>
               <div className="d-flex justify-content-between flex-wrap ">
-                <div className="form-floating">
+                <div className="form-floating mobile-design">
                   <input
                     type="number"
                     min={0}
@@ -962,7 +965,7 @@ function ARCUploading({ data, setImageID, addedImagee, setAddedImages, price, of
 
             <button
               type="button"
-              className="btn btn-primary next-btn mt-2"
+              className="btn btn-primary next-btn-special mt-2"
               onClick={handlenext_2}
             >
               التالي

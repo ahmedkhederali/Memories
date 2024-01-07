@@ -50,7 +50,7 @@ const ARCPhotoEditor = ({ image, onImageEdited, url, name,inputRef}) => {
   }
 
   return (
-    <div className='d-flex justify-content-center' style={{height:"100%"}}>
+    <div className='d-flex justify-content-center mobile-design' style={{height:"100%"}}>
       <div
         ref={containerRef}
         style={{
@@ -70,7 +70,7 @@ const ARCPhotoEditor = ({ image, onImageEdited, url, name,inputRef}) => {
           rotation={rotation}
         />
       </div>
-      <div className='btn-div'>
+      <div className='btn-div '>
         <button onClick={handleRotateLeft} className='rotate-btn p-2 mb-2 ms-2'>يسار</button>
         <button onClick={handleRotateRight} className='rotate-btn p-2 mb-2 ms-2'>يمين</button>
         <button onClick={() => handleSave(name,title)} className='save-btn  p-2 ms-2'>حفظ الصورة</button>

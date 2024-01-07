@@ -20,3 +20,39 @@ code {
 }
 
 
+
+@media only screen and (max-width: 767px) {
+  /* Your mobile styles go here */
+  .image-mobile{
+    width: 100%;
+  }
+  .ReactModal__Content {
+    height: 96vh !important;
+  }
+  .mobile-design{
+    flex-direction: column;
+  }
+  .btn-div{
+    margin-top: 27px;
+  }
+  .form-floating input{
+    width: 100% !important;
+  }
+  .ali {
+    display: flex;
+    flex-direction: column;
+  }
+  .ali >div{
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-design{
+    display: flex;
+    flex-direction: column;
+  }
+  .model1_buttons{
+    width: 100% !important;
+    margin: 5px;
+  }
+}
+

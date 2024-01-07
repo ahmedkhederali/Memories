@@ -712,7 +712,7 @@ console.log("data",data)
             <div className="col-sm-6 col-xs-12 image_model">
               <div>
                 <div style={{ width: '100%' }}>
-                  <div className="" style={{ position: 'relative', height: '80%',width:"70%"}}>
+                  <div className="image-mobile" style={{ position: 'relative', height: '80%',width:"70%"}}>
                     <img src={imagessrc} style={{ width: "100%", margin: "auto" }} />
                     {adminlike || comments.some(comment => comment.author === "Adminsecret") ? <FontAwesomeIcon icon={faStar} style={{ color: "#2dc7e6" }} className="star" /> : null}
                   </div>
