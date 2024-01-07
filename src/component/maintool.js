@@ -1,6 +1,7 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 import LazyLoad from 'react-lazyload';
+import { useDebounceEffect } from 'ahooks';
 
 function Loading({ data, len, setImageID, ImageID,bg ,reff}) {
   const panelRef = useRef(null);
@@ -64,27 +65,90 @@ function Loading({ data, len, setImageID, ImageID,bg ,reff}) {
     
   }, [ ImageID]);
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [zoomSrc, setZoomSrc] = useState(null);
+  const containerRef = useRef()
+
+  useDebounceEffect(
+    () => {
+      let touchstartX = 0;
+      let touchendX = 0;
+
+      const swipeLeft = () => {
+        setCurrentIndex(currentIndex + 1);
+      };
+
+      const swipeRight = () => {
+        setCurrentIndex(currentIndex - 1);
+      };
+
+      function checkDirection() {
+        let shouldSwipe = !zoomSrc;
+
+        if (!shouldSwipe) {
+          return;
+        }
+
+        const threshold = 70;
+        const swipeDistance = Math.abs(touchstartX - touchendX);
+        const isSwipe = swipeDistance >= threshold;
+
+        if (!isSwipe) {
+          return;
+        }
+
+        if (touchendX < touchstartX) {
+          swipeLeft();
+        } else if (touchendX > touchstartX) {
+          swipeRight();
+        }
+      }
+
+      const touchStart = (e) => {
+        touchstartX = e.changedTouches[0].screenX;
+      };
+
+      const touched = (e) => {
+        touchendX = e.changedTouches[0].screenX;
+        checkDirection();
+      };
+
+      containerRef.current.addEventListener("touchstart", touchStart);
+      containerRef.current.addEventListener("touchend", touched);
+
+      return () => {
+        containerRef.current.removeEventListener("touchstart", touchStart);
+        containerRef.current.removeEventListener("touchend", touched);
+      };
+    },
+    [currentIndex, zoomSrc],
+    {
+      wait: 90
+    }
+  );
 
   return (
-    <div style={{width:"100%", overflow:'hidden'}}
+    <div ref={containerRef} style={{width:"100%", overflow:'hidden'}} 
     
     >
-      <TransformWrapper ref={zoomPanRef}
-      options={{ pan: false, pinch: false }}
-      alignmentAnimation={{ sizeX: 0, sizeY: 0 }}
+    <TransformWrapper ref={zoomPanRef}
+      disablePadding
+      onZoomStart={() => {
+          setZoomSrc(data[currentIndex]);
+      }}
     >
-    <TransformComponent>
-      <div id="mosaic-container"  ref={reff} className="p-0 m-0" disableMapInteraction style={{backgroundImage:`url(${bg})`,}}>
+      <TransformComponent>
+     <div id="mosaic-container"  ref={reff} className="p-0 m-0" disableMapInteraction style={{backgroundImage:`url(${bg})`,}}>
         <div ref={panelRef} className="d-flex flex-wrap p-0 m-0" >
           {data}
           {renderLargeDivs(len)}
         </div>
       </div>
 
-    </TransformComponent>
-  </TransformWrapper>
+      </TransformComponent>
+    </TransformWrapper>
     </div>
-  
+
   );
 }
 
