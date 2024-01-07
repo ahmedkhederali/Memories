@@ -1,5 +1,5 @@
 
-const API_ENDPOINT = 'https://datamanager686.pythonanywhere.com/api/send-email/';
+const API_ENDPOINT = 'https://snapus.pythonanywhere.com/api/send-email/';
 
 const sendEmail = async (price,email) => {
   const data = {

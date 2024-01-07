@@ -128,7 +128,7 @@ label::after{
   }
   .gallary_header {
     position: sticky;
-    top: 0;
+    top: -10px;
     width: 100%;
     z-index: 100;
     background-color: #363534;
@@ -136,7 +136,7 @@ label::after{
   
   .gallary_footer {
     position: sticky;
-    bottom: 0;
+    bottom: -12px;
     width: 100%;
     z-index: 100;
     background-color: #363534;
@@ -516,7 +516,7 @@ label::after{
     }
     .model1_buttons{
             width:350px;
-            height:40px;
+            height:50px;
             background-color: #222222 !important;
             color:#f29122f1 !important;
             border:0px solid transparent !important;

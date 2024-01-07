@@ -105,3 +105,7 @@ html {
   width: fit-content !important;
   overflow: hidden   !important;
 } */
+span{
+  color:#f29122f1!important;
+  margin-left: 8px;
+}

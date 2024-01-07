@@ -291,7 +291,7 @@ function ArcFooter() {
               <div className="footer-info-single">
                 <h2 className="title mb-2 text-center">مدعوم من</h2>
                 <div className='col-12 d-flex justify-content-center  '>
-                  <img src={logo} className='w-50'  />
+                  <img src={logo} className='rounded-circle' style={{width:"90px",height:"90px"}}  />
                 </div>
               </div>
             </div>
@@ -302,9 +302,9 @@ function ArcFooter() {
                 <div className="social-media w-100 d-flex justify-content-center m-2" style={{ overflowX: 'scroll' }} ref={sliderRef}>
                   <div className='d-flex  justify-content-between'>
                   {spons.map((item, index) => (
-                      <div className='col-3  d-flex justify-content-start' key={index}>
+                      <div className='col-2  d-flex justify-content-start' key={index}>
                         <div className='col-11 '>
-                          <img src={item.image} className='w-100 h-100 border-4 rounded-circle' alt={`Sponsor ${index + 1}`} />
+                          <img src={item.image} style={{width:"90px",height:"90px"}} className='border-4 rounded-circle' alt={`Sponsor ${index + 1}`} />
                         </div>
                       </div>
                     ))}

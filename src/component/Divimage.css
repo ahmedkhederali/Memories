@@ -156,8 +156,8 @@
       box-shadow: 0 0 0 0.25rem rgba(188, 116, 7, 0.25) !important;
   }
   .div-item{
-    width: 1px;
-    height: 1px;
+    width: 20px;
+    height: 20px;
     border:0.1px solid rgba(128, 128, 128, 0.05);
     
   }
@@ -268,8 +268,10 @@
   }
 .crvimg{
   position: absolute;
-  top: 0;
-  width:100%;
+  top: -6px;
+  right: -1px;
+  left: -1px;
+  width:101%;
   z-index: -1;
 }
 

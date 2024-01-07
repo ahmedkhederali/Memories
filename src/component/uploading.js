@@ -388,7 +388,7 @@ function Uploading({ data, setImageID, addedImagee, setAddedImages, price, offer
           formDataimage.append('image', element);
 
           try {
-            const response = await fetch('https://datamanager686.pythonanywhere.com/api/detect-nudity/', {
+            const response = await fetch('https://snapus.pythonanywhere.com/api/detect-nudity/', {
               method: 'POST',
               body: formDataimage,
             });
@@ -401,7 +401,7 @@ function Uploading({ data, setImageID, addedImagee, setAddedImages, price, offer
                 console.log("PicPurify API call successful:", responseData);
                 try {
                   const postResponse = await fetch(
-                    "https://datamanager686.pythonanywhere.com/api/images/",
+                    "https://snapus.pythonanywhere.com/api/images/",
                     {
                       method: "POST",
                       body: formData,
@@ -591,7 +591,7 @@ function Uploading({ data, setImageID, addedImagee, setAddedImages, price, offer
 
   // function to handle Submit when select image from local device
   const handeleGallarySubmit = async (data) => {
-    debugger
+    
     await handlenext_for_galary_1(data)
     // const limit = parseInt(numimage); // Parse the number of images from the input field
 
@@ -681,6 +681,7 @@ function Uploading({ data, setImageID, addedImagee, setAddedImages, price, offer
     try {
       const resultingFiles = await Gallaryarrayhandling(convert, title);
       const uploadPromises = resultingFiles.map((element) => {
+        console.log("element",element)
         const formData = new FormData();
         formData.append("image", element);
         formData.append("author", email);
@@ -690,7 +691,7 @@ function Uploading({ data, setImageID, addedImagee, setAddedImages, price, offer
         formData.append("tw", twitter ? twitter : "#");
         formData.append("ln", linked ? linked : "#");
 
-        return fetch("https://datamanager686.pythonanywhere.com/api/images/", {
+        return fetch("https://snapus.pythonanywhere.com/api/images/", {
           method: "POST",
           body: formData,
         })
@@ -798,7 +799,7 @@ function Uploading({ data, setImageID, addedImagee, setAddedImages, price, offer
     }
   }
   const handleGallaryUpload = async () => {
-    debugger
+    
     var getAllImageUrls = selectedImages.map(item => item.image)
     const getReturnFiles = await convertUrlsToFiles(getAllImageUrls, `zz`)
     await handeleGallarySubmit(getReturnFiles)
@@ -820,7 +821,7 @@ function Uploading({ data, setImageID, addedImagee, setAddedImages, price, offer
         style={customStyles}
       >
         {moving == 1 && (
-          <div>
+          <div className="ali">
             <p className="text_price fading-animation mb-3 col-sm-12">
               {offer}
             </p>
@@ -1010,7 +1011,7 @@ function Uploading({ data, setImageID, addedImagee, setAddedImages, price, offer
               </p>
             </div>
             <div
-              style={{ height: "auto", position: "relative" }}
+              style={{ height: "70vh !important", position: "relative" }}
               className="p-3"
             >
               <Gallery

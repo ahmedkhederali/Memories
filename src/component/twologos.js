@@ -31,11 +31,11 @@ function Logos({ lang }) {
 
   return (
     <div className="d-flex justify-content-between  logoooo" style={{ height: 150 }} dir={lang !== 'true' && 'rtl'}>
-      <div className="col-md-5 col-sm-6 col-7 d-flex justify-content-start align-items-center  h-100">
+      <div className="col-md-5 col-sm-6 col-7 d-flex justify-content-start align-items-center  h-100" >
         <img className="w-100 h-100 image-mobil" src={lang === 'true' ? image1en : image1ar} alt="Logo 1" />
       </div>
-      <div className="col-md-5 col-sm-5 col-4 d-flex justify-content-end align-items-center h-50">
-        <img className="w-5 0 h-100 image-mobil" src={lang === 'true' ? image2en : image2ar} alt="Logo 2" />
+      <div className="col-md-5 col-sm-5 col-4 d-flex justify-content-end align-items-center h-50" style={{width:"auto"}}>
+        <img className="image-mobil  rounded-circle" src={lang === 'true' ? image2en : image2ar} alt="Logo 2" style={{width:"90px",height:"90px"}} />
       </div>
     </div>
   );

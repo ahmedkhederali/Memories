@@ -219,7 +219,7 @@ function ImageZoom({ addedImagee, setAddedImages }) {
   const decreaselikes = () => {
     // Calculate updated like count
 
-    var url = `https://datamanager686.pythonanywhere.com/api/dislike/create/${idid}/`;
+    var url = `https://snapus.pythonanywhere.com/api/dislike/create/${idid}/`;
 
     fetch(url, {
       method: 'PUT', // Use 'PUT' to match the Python code's HTTP method
@@ -246,7 +246,7 @@ function ImageZoom({ addedImagee, setAddedImages }) {
   const putcomment = async (comm) => {
 
     try {
-      const response = await fetch(`https://datamanager686.pythonanywhere.com/api/comments/create/${idid}/`, {
+      const response = await fetch(`https://snapus.pythonanywhere.com/api/comments/create/${idid}/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -311,7 +311,7 @@ function ImageZoom({ addedImagee, setAddedImages }) {
   }, []);
 
 
-
+console.log("data",data)
   const getproduct = data.map((product, index) => {
 
     const productID = product.id;
@@ -573,7 +573,7 @@ function ImageZoom({ addedImagee, setAddedImages }) {
                       {searchResults.map((result, index) => (
                         <>
                           <li key={index} style={{ display: "flex" }} onClick={() => {
-                            debugger
+                            
                             console.log("result", result)
                             setimagesrc(result.image);
                             setlikecount(result.num_likes);
@@ -639,7 +639,7 @@ function ImageZoom({ addedImagee, setAddedImages }) {
                       {searchResults.map((result, index) => (
                         <>
                           <li key={index} style={{ display: "flex" }} onClick={() => {
-                            debugger
+                            
                             console.log("result", result)
                             setimagesrc(result.image);
                             setlikecount(result.num_likes);
@@ -712,7 +712,7 @@ function ImageZoom({ addedImagee, setAddedImages }) {
             <div className="col-sm-6 col-xs-12 image_model">
               <div>
                 <div style={{ width: '100%' }}>
-                  <div className="w-100" style={{ position: 'relative', height: '80%' }}>
+                  <div className="" style={{ position: 'relative', height: '80%',width:"70%"}}>
                     <img src={imagessrc} style={{ width: "100%", margin: "auto" }} />
                     {adminlike || comments.some(comment => comment.author === "Adminsecret") ? <FontAwesomeIcon icon={faStar} style={{ color: "#2dc7e6" }} className="star" /> : null}
                   </div>
@@ -782,7 +782,7 @@ function ImageZoom({ addedImagee, setAddedImages }) {
                 </div>
                 <p className="Description" dir={lang != 'true' ? 'rtl' : 'ltr'}>{lang == 'true' ? 'Description' : 'الوصف'}: <span style={{ color: "gray" }}>{puttitle}</span></p>
                 <div className="commentlist" dir={lang != 'true' ? 'rtl' : 'ltr'}>
-                  {comments.length > 0 && comments.map((comment) => {
+                  {comments.length > 0 ? comments.map((comment) => {
                     return (
                       <>
                         <p className="fw-bold p-0 m-0">
@@ -791,7 +791,11 @@ function ImageZoom({ addedImagee, setAddedImages }) {
                         <p style={{ color: "gray", fontSize: '14px' }} className="p-0 m-0 mb-2">{comment.text}</p>
                       </>
                     )
-                  })}
+                  })
+                  : 
+                  <p>{lang != 'true' ? 'لا يوجد تعليقات' : 'No Comment'}</p>
+                  
+                  }
                   {email.length > 0 ? email.map((ele) => {
                     return <p>{ele}</p>
                   }) : null}

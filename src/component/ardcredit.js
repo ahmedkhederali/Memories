@@ -44,8 +44,8 @@ function ARCCredit({ setCardData, cardData, isChecked, onCheckboxChange }) {
                         <input type="text" className="form-control"
                             name='name'
                             id="floatingInput" value={cardData.name} onChange={handleChange}
-                            onFocus={e => setfocus(e.target.name)} 
-                            dir="rtl" autoComplete="off"/>
+                            onFocus={e => setfocus(e.target.name)}
+                            dir="rtl" autoComplete="off" />
                         <label for="floatingInput" className="vis_label">الاسم</label>
                     </div>
                 </div>
@@ -65,16 +65,16 @@ function ARCCredit({ setCardData, cardData, isChecked, onCheckboxChange }) {
                             type="text"
                             id="floatingInput" value={cardData.cvc} onChange={handleChange}
                             onFocus={e => setfocus(e.target.name)}
-                            style={{width:'100%'}}
+                            style={{ width: '100%' }}
                             dir="rtl"
-                            />
-                        <label for="floatingInput" className="vis_label">CVC</label>
+                        />
+                        <label for="floatingInput" className="vis_label">رمز التحقق من البطاقة</label>
                     </div>
                 </div>
 
             </form>
-            <section className="d-flex align-items-center justify-content-between">
-                <div class="form-check">
+            <section className="d-flex align-items-center justify-content-between mt-2" style={{ flexDirection: 'row-reverse' }}>
+                <div className="form-check">
                     <input
                         className="form-check-input"
                         type="checkbox"
@@ -82,23 +82,29 @@ function ARCCredit({ setCardData, cardData, isChecked, onCheckboxChange }) {
                         id="flexCheckDefault"
                         checked={isChecked}
                         onChange={onCheckboxChange}
+                        style={{float: 'right', marginLeft:" 0.4em"}}
                     />
-                    <Link to={'trems/false'} className="form-check-label checklabels p-0 m-0" for="flexCheckDefault" style={{ fontSize: 12, textDecoration: 'underline' }} >
-                        agree with all terms&conditions
+                    <Link
+                        to={'trems/false'}
+                        className="form-check-label checklabels p-0 m-0"
+                        htmlFor="flexCheckDefault" // 'for' attribute is replaced with 'htmlFor' in JSX
+                        style={{ fontSize: 12, textDecoration: 'underline' }}
+                    >
+                        موافق على جميع الشروط والأحكام
                     </Link>
                 </div>
                 <div className="d-flex imagec_credit col-5 ">
-                    <div  className="rounded  mx-2 d-flex justify-content-center align-items-center">
-                        <img src={image1} style={{ width: '100%' }} className="p-1"/>
+                    <div className="rounded  mx-2 d-flex justify-content-center align-items-center">
+                        <img src={image1} style={{ width: '100%' }} className="p-1" />
                     </div>
-                    <div  className="rounded  mx-2 d-flex justify-content-center align-items-center">
-                        <img src={image2} style={{ width: '100%'}}className="p-1" />
+                    <div className="rounded  mx-2 d-flex justify-content-center align-items-center">
+                        <img src={image2} style={{ width: '100%' }} className="p-1" />
                     </div>
-                    <div  className="rounded  mx-2 d-flex justify-content-center align-items-center">
-                        <img src={image3} style={{ width: '100%' }} className="p-1"/>
+                    <div className="rounded  mx-2 d-flex justify-content-center align-items-center">
+                        <img src={image3} style={{ width: '100%' }} className="p-1" />
                     </div>
-                    <div  className="rounded  ms-2 d-flex justify-content-center align-items-center">
-                        <img src={image4} style={{ width: '100%' }}className="p-1" />
+                    <div className="rounded  ms-2 d-flex justify-content-center align-items-center">
+                        <img src={image4} style={{ width: '100%' }} className="p-1" />
                     </div>
                 </div>
 

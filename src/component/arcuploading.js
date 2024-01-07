@@ -373,6 +373,7 @@ function ARCUploading({ data, setImageID, addedImagee, setAddedImages, price, of
   };
   // function to handle Submit when select image from local device
   const handelenext_3 = async (event) => {
+    
     event.preventDefault();
     let pornimage = 0;
     if (length + dataimage.length <= 1000000 - holdspot) {
@@ -391,7 +392,7 @@ function ARCUploading({ data, setImageID, addedImagee, setAddedImages, price, of
           formDataimage.append('image', element);
 
           try {
-            const response = await fetch('https://datamanager686.pythonanywhere.com/api/detect-nudity/', {
+            const response = await fetch('https://snapus.pythonanywhere.com/api/detect-nudity/', {
               method: 'POST',
               body: formDataimage,
             });
@@ -404,7 +405,7 @@ function ARCUploading({ data, setImageID, addedImagee, setAddedImages, price, of
                 console.log("PicPurify API call successful:", responseData);
                 try {
                   const postResponse = await fetch(
-                    "https://datamanager686.pythonanywhere.com/api/images/",
+                    "https://snapus.pythonanywhere.com/api/images/",
                     {
                       method: "POST",
                       body: formData,
@@ -594,7 +595,7 @@ function ARCUploading({ data, setImageID, addedImagee, setAddedImages, price, of
 
   // function to handle Submit when select image from local device
   const handeleGallarySubmit = async (data) => {
-    debugger
+    
     await handlenext_for_galary_1(data)
     // const limit = parseInt(numimage); // Parse the number of images from the input field
 
@@ -682,9 +683,11 @@ function ARCUploading({ data, setImageID, addedImagee, setAddedImages, price, of
 
   const handelenext_33 = async (event) => {
     try {
+      
       const resultingFiles = await Gallaryarrayhandling(convert, title);
       const uploadPromises = resultingFiles.map((element) => {
         const formData = new FormData();
+        console.log("element",element)
         formData.append("image", element);
         formData.append("author", email);
         formData.append("title", element.title);
@@ -693,7 +696,7 @@ function ARCUploading({ data, setImageID, addedImagee, setAddedImages, price, of
         formData.append("tw", twitter ? twitter : "#");
         formData.append("ln", linked ? linked : "#");
 
-        return fetch("https://datamanager686.pythonanywhere.com/api/images/", {
+        return fetch("https://snapus.pythonanywhere.com/api/images/", {
           method: "POST",
           body: formData,
         })
@@ -801,7 +804,7 @@ function ARCUploading({ data, setImageID, addedImagee, setAddedImages, price, of
     }
   }
   const handleGallaryUpload = async () => {
-    debugger
+    
     var getAllImageUrls = selectedImages.map(item => item.image)
     const getReturnFiles = await convertUrlsToFiles(getAllImageUrls, `zz`)
     await handeleGallarySubmit(getReturnFiles)
@@ -826,7 +829,7 @@ function ARCUploading({ data, setImageID, addedImagee, setAddedImages, price, of
         style={customStyles}
       >
         {moving == 1 && (
-          <div >
+          <div className="ali" style={{height:"10px !important"}}>
             <p className="text_price fading-animation mb-3 col-sm-12">
               {offer}
             </p>
@@ -962,7 +965,7 @@ function ARCUploading({ data, setImageID, addedImagee, setAddedImages, price, of
               className="btn btn-primary next-btn mt-2"
               onClick={handlenext_2}
             >
-              Next
+              التالي
             </button>
           </div>
         )}
@@ -994,7 +997,7 @@ function ARCUploading({ data, setImageID, addedImagee, setAddedImages, price, of
                   : handelenext_33
               }
             >
-              Submit
+             دفع 
             </button>
           </div>
         )}
@@ -1017,7 +1020,7 @@ function ARCUploading({ data, setImageID, addedImagee, setAddedImages, price, of
               </p>
             </div>
             <div
-              style={{ height: "auto", position: "relative" }}
+              style={{ height: "70vh !important", position: "relative" }}
               className="p-3"
             >
               <Gallery
