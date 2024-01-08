@@ -156,8 +156,8 @@
       box-shadow: 0 0 0 0.25rem rgba(188, 116, 7, 0.25) !important;
   }
   .div-item{
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border:0.1px solid rgba(128, 128, 128, 0.05);
     
   }

@@ -883,7 +883,7 @@ function Uploading({ data, setImageID, addedImagee, setAddedImages, price, offer
                 onClick={handlenext_1}
                 style={{ letterSpacing: 0 }}
               >
-                التالي
+                Next
               </button>
             </div>
           </div>

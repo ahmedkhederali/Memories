@@ -54,5 +54,8 @@ code {
     width: 100% !important;
     margin: 5px;
   }
+ .arsr-output{
+    width: 50% !important;
+  }
 }
 

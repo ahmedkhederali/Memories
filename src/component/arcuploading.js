@@ -965,7 +965,7 @@ debugger
 
             <button
               type="button"
-              className="btn btn-primary next-btn-special mt-2"
+              className="btn btn-primary next-btn mt-2"
               onClick={handlenext_2}
             >
               التالي

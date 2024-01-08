@@ -13,7 +13,7 @@ function Loading({ data, len, setImageID, ImageID,bg ,reff}) {
       .map((_, index) => (
         <LazyLoad key={index} height={200} offset={100} once>
           <div key={index} className="div-item" id={`div-${index}`} disableMapInteraction>
-            {/* {data[Math.floor((Math.random()) * 900)]} */}
+            {/* {data[Math.floor((Math.random()) * 9000)]} */}
           </div>
         </LazyLoad>
       ));

@@ -320,7 +320,7 @@ console.log("data",data)
 
     return (
       <div
-        className="tile p-0 m-0"
+        className="tile p-0 m-0 card-image-contaiber"
         key={product.id}
         disableMapInteraction
         id={product.id}
@@ -328,8 +328,8 @@ console.log("data",data)
           backgroundImage: `url(${product.image})`,
           opacity: "0.2 !important",
           border: borderStyle,
-          width:"20px",
-          height:"20px",
+          width:"10px",
+          height:"10px",
           margin:"1px !important",
           opacity:"!important"
         }}
